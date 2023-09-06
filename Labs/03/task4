@@ -10,7 +10,10 @@ int main() {
 	scanf(" %c", &x);
 	printf("Enter Any Number: ");
 	scanf("%d", &b);
-	if (x == '+') {
+	if (a <= 0 || b <= 0) {
+	printf("Use positive non zero values");
+}
+	else if (x == '+') {
 	float ans = a+b;
 	printf("sum is: %f", ans);
 }
