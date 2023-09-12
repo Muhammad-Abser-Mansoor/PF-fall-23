@@ -5,29 +5,36 @@ int main() {
     char rev[100];
     char con = 'x';
     int count = 0;
-    while (con != 'y') {
+    int n = 0;
+    int i = 0;
+    printf("Enter Length of word ");
+    scanf("%d", &n);
+    if (n > 100) {
+        printf("Word limit exceeded\n");
+        return 1;
+    }
+    while (con != 'y' && i < n) {
         printf("Enter a character ");
-        scanf(" %c", &arr);
+        scanf(" %c", &arr[i]);
+        rev[i] = arr[i];
         printf("Is the word complete?(y or n) ");
         scanf(" %c", &con);
+        i++;
         count++;
     }
-        if (count <= 1) {
-            printf("Invalid input"); }
+        if (count != n) {
+            printf("Invalid input\n"); }
             else {
                 int a = 0;
-                int b = 99;
-                while (b >= 0) {
-                    arr[b] = rev[a];
-                    a++;
-                    b--;
-                    if (arr[b] == rev[a]) {
-                        return 1; }
-                        else {
-                            break;
-                            printf("Not palindrome");
-                        }
-                    }
+                int b = n - 1;
+                while (a <= b) {
+                    if (arr[b] != rev[a]) {
+                        printf("Not a palindrome\n");
+                        return 0;    }
+                        a++;
+                        b--;
                 }
-                printf("Word is a Plaindrome");
-            }       
+                printf("Word is a Palindrome\n");
+                    }
+                    return 0;
+                }
