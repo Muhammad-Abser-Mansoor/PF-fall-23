@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    char arr[100];
+    char rev[100];
+    char con = 'x';
+    int count = 0;
+    while (con != 'y') {
+        printf("Enter a character ");
+        scanf(" %c", &arr);
+        printf("Is the word complete?(y or n) ");
+        scanf(" %c", &con);
+        count++;
+    }
+        if (count <= 1) {
+            printf("Invalid input"); }
+            else {
+                int a = 0;
+                int b = 99;
+                while (b >= 0) {
+                    arr[b] = rev[a];
+                    a++;
+                    b--;
+                    if (arr[b] == rev[a]) {
+                        return 1; }
+                        else {
+                            break;
+                            printf("Not palindrome");
+                        }
+                    }
+                }
+                printf("Word is a Plaindrome");
+            }       
