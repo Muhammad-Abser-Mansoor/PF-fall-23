@@ -25,7 +25,7 @@ int main() {
 	int dbm = abm - bbm;
 	int dby = aby - bby;
 	if (dbd < 0) {
-		dbm = dbm + 1;
+		dbm = dbm - 1;
 		dbd = dbd + 30;
 	}
 	if (dbm < 0) {
