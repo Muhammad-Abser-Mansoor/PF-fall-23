@@ -22,15 +22,16 @@ int main() {
 	det = b*b - 4*a*c;
 	sdet = sqrt(det);
 	div = 2*a;
-	while (det >= 0 && div != 0) {
+	if (det >= 0 && div != 0) {
 	up1 = sdet - b;
 	ans1 = up1/div;
 	up2 = -sdet-b;
 	ans2 = up2/div;
 	printf("%f", ans1);
-	printf("%f", ans2);
+	printf("%f", ans2); }
+	else {
+	printf("no real roots");
 	return 1;
-}
 }
 
 	
