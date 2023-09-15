@@ -25,11 +25,11 @@ int main() {
         j = 0;
         seq[j] = m;
         while (k<n) {
-            if (k == j) {
+            if (k == j) { // Ignoring same addresses
                 k++;
             }
             else if (seq[k] == m) {
-                printf("%d",m);
+                printf("%d",m); // Finding and printing duplicate values
                 k++; }
                 else {
                    k++; 
