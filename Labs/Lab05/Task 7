@@ -25,12 +25,14 @@ int main() {
 		printf("Total amount is %d", cost);
 		printf("\nActual amount is %d", act);
 		printf("\nSaved amount is %d", save); }
-	else {
+	else if {
 		dis = 50;
 		save = cost*(dis/100);
 		act = cost - save;
 		printf("Total amount is %d", cost);
 		printf("\nActual amount is %d", act);
 		printf("\nSaved amount is %d", save); }
+	else {
+		printf("Invlaid Input"); }
 	return 0;
 }
