@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+	char x = 'e';
+	printf("Are you sure you want to delete this file? Press y for yes and n for no \n");
+	scanf(" %c", &x);
+	switch(x) {
+		case 'y':
+		printf("\n File Deleted Successfully");
+		break;
+		case 'n':
+		printf("\n File deletion aborted");
+		break;
+		default:
+		printf("\n Incorrect Input imma delete that shite"); }
+	return 0;
+}
