@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+	int n = 0;
+	printf("Enter the current hour(in 24 hour format) ");
+	scanf("%d", &n);
+	if (n >= 5 && n <= 11) {
+		printf("Ohayo"); }
+	else if (n >= 12 && n < 18) {
+		printf("Good Afternoon"); }
+	else if (n >= 18 && n <= 24) {
+		printf("Oyasumi"); }
+	else {
+		printf("Why the hell are you here right now?"); }
+	return 0;
+}
