@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+	int n = 0;
+	char in = 'x';
+	printf("Enter the character ");
+	scanf(" %c", &in);
+	n = (int) in;
+	if ((n >= 33 && n <= 47) || (n >= 58 && n <= 64) || (n >= 91 && n <= 96) || (n >= 123 && n <= 255)) {
+		printf("Character is a special character"); }
+	else if (n >= 48 && n <= 57) {
+		printf("Character is a digit"); }
+	else if (n >= 41 && n <= 90) {
+		printf("Character is Uppercase"); }
+	else {
+		printf("Character is lowercase"); }
+	return 0;
+}
