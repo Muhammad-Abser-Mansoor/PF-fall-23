@@ -11,7 +11,7 @@ int main() {
 	if ((bin1 < 0000 || bin1 > 1111) || (bin2 < 0000 || bin2 > 1111) || (bin1 == 0000 && bin2 == 0000) || (bin1 == 1111 && bin2 == 1111))  {
 		printf("Invalid input"); } // error message for invalid input possibilities
 	else {
-		printf("New binary number is %d%d",bin2,bin1); } // Print swapped binary halves
+		printf("New binary number is %04d%04d",bin2,bin1); } // Print swapped binary halves
 	return 0;
 } //End main
 
