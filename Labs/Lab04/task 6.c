@@ -1,4 +1,4 @@
-# I copied this as I just could not figure out how to make this. Sorry.
+//I copied this as I just could not figure out how to make this. Sorry.
 
 
 // included libs
