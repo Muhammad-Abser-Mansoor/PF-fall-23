@@ -15,4 +15,4 @@ int main() {
 	else { // the only condition left is lower alphabets
 		printf("Character is lowercase"); }
 	return 0;
-}
+} //End main
