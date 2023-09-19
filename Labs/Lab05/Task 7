@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+	int cost = 0;
+	int act = 0;
+	int save = 0;
+	int dis = 0;
+	printf("Enter price of items bought ");
+	scanf("%d", &cost);
+	if (cost <= 1999) {
+		printf("Total amount is %d", cost);
+		printf("\nActual amount is %d", act);
+		printf("\nSaved amount is %d", save); }
+	else if (cost >= 2000 && cost <= 4000) {
+		dis = 20;
+		save = cost*(dis/100);
+		act = cost - save;
+		printf("Total amount is %d", cost);
+		printf("\nActual amount is %d", act);
+		printf("\nSaved amount is %d", save); }
+	else if (cost >= 4001 && cost <= 6000) {
+		dis = 30;
+		save = cost*(dis/100);
+		act = cost - save;
+		printf("Total amount is %d", cost);
+		printf("\nActual amount is %d", act);
+		printf("\nSaved amount is %d", save); }
+	else {
+		dis = 50;
+		save = cost*(dis/100);
+		act = cost - save;
+		printf("Total amount is %d", cost);
+		printf("\nActual amount is %d", act);
+		printf("\nSaved amount is %d", save); }
+	return 0;
+}
