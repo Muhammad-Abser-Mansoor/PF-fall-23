@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+	int b[7];
+	int j = 0;
+	int n = 0;
+	int ans = 0;
+	for (int i = 0;i < 8;i++) {
+		printf("Enter an a bit of the Binary number ");
+		scanf("%d", &n);
+		b[j] = n;
+		j++;
+		if ((n == 1 && j == 3) && (n == 1 && j == 6)) {
+		b[3] = 0;
+		b[7] = 0; }
+		else if (n != 0 && n != 1) {
+		printf("invalid input");
+		break; }
+		else {
+		continue; }
+	}
+	j = 0;
+	for (int i = 0;i < 8;i++); {
+		b[j] = ans;
+		printf("%d", ans);
+		j++; }
+	return 0;
+}
+
+	
