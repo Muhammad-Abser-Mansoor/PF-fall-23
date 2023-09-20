@@ -10,7 +10,7 @@ int main() {
 		printf("Character is a special character"); }
 	else if (n >= 48 && n <= 57) { // range of digits
 		printf("Character is a digit"); }
-	else if (n >= 41 && n <= 90) { // range of uppercase alphabets
+	else if (n >= 65 && n <= 90) { // range of uppercase alphabets
 		printf("Character is Uppercase"); }
 	else { // the only condition left is lower alphabets
 		printf("Character is lowercase"); }
