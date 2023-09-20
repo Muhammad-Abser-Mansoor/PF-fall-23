@@ -8,6 +8,7 @@ int main() {
 	printf("Enter price of items bought "); // Cost input
 	scanf("%d", &cost);
 	if (cost <= 1999) { // No discount
+		act = cost;
 		printf("Total amount is %d", cost);
 		printf("\nActual amount is %d", act);
 		printf("\nSaved amount is %d", save); }
