@@ -18,8 +18,6 @@ int find_even_index(const int *values, int length) {
   }
     }
   else {
-    j = length;
-    i = 0;
     while (i <= length/2) {
     num = values[i];
     sum1 = sum1 + num;
