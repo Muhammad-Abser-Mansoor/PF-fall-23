@@ -6,10 +6,10 @@ int find_even_index(const int *values, int length) {
   int sum2 = 0;
   int num = 0;
   if (length % 2 == 0) {
-  while (i <= length/2) {
+  while (i < length/2) {
     num = values[i];
     sum1 = sum1 + num;
-    while (j >= length/2) {
+    while (j > length/2) {
       num = values[j];
       sum2 = sum2 + num;
       j--;
@@ -20,10 +20,10 @@ int find_even_index(const int *values, int length) {
   else {
     j = length;
     i = 0;
-    while (i < length/2) {
+    while (i <= length/2) {
     num = values[i];
     sum1 = sum1 + num;
-    while (j > length/2) {
+    while (j >= length/2) {
       num = values[j];
       sum2 = sum2 + num;
       j--;
