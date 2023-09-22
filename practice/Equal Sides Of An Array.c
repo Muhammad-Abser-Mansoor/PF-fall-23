@@ -21,7 +21,7 @@ int find_even_index(const int *values, int length) {
     while (i <= length/2) {
     num = values[i];
     sum1 = sum1 + num;
-    while (j >= length/2) {
+    while (j > length/2) {
       num = values[j];
       sum2 = sum2 + num;
       j--;
