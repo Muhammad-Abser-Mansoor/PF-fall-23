@@ -9,16 +9,19 @@
 int main() {
     int i = 0;
     int el = 0;
-    int sum = 0;   
-    int array[9]={0};
-    while (i<9) {
+    int sum = 0;
+    int n = 0;
+    printf("Enter size of array ");
+    scanf("%d",&n);
+    int array[100]={0};
+    while (i<n) {
         printf("Enter element of array ");
         scanf("%d",&el);
         array[i]=el;
         i++;
     }
     i = 0;
-    while (i<9) {
+    while (i<n) {
         sum += array[i];
         i++;
     }
