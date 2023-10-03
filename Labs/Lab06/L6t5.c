@@ -1,6 +1,6 @@
 /**
  * Programmer: Muhammad Abser Mansoor
- * Desc: Integer interpretation
+ * Desc: Number pattern
  * Date: 10/3/23
  */
  #include <stdio.h>
