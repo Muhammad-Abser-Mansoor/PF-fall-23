@@ -18,7 +18,7 @@ int main() {
             break;
         }
         else {
-            n = n-(rand()%(4 - 1 + 1)) + 1;
+            n = n-(rand()%4) + 1;
             if (n == 0) {
                 n=n+4;
                 continue;
