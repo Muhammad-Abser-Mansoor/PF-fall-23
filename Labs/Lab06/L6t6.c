@@ -9,7 +9,6 @@
 int main() {
     int n = 21;
     int p = 0;
-    char x = 'e';
     while (n>0) {
         printf("How many sticks do you want? ");
         scanf("%d",&p);
