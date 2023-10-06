@@ -6,7 +6,9 @@ int main() {
   if (n >= 10) {
     while (!(n<10)) {
     if (n<100 && n>=10) {
-        num1=num1*num1%10*num1%100;
+        num1=num1*n%10;
+        n = n/10;
+        num1 = num1*n%10;
         n=num1;
         i++;}
     else {
