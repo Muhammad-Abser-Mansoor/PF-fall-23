@@ -11,10 +11,12 @@ int main() {
     int sum = 0;
     printf("%d %d ",i,j);
     int ans = 0;
-    for(int n = 0;ans < 6765;n++) {
+    for(int n = 0;ans < 10000;n++) {
             ans = i + j;
             i = j;
             j = ans;
+            if (ans >= 10000) {
+                break; }
             printf(" %d ",ans);
             if (!(ans%3) || !(ans%5) || !(ans%7)) {
                 sum += ans; }
