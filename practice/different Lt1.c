@@ -11,10 +11,9 @@ int main() {
     for (int i = a;i<=b;i++) {
         arr[j]=i;
         j++;
-        printf("%d",arr[j]);
     }
     int check = 0;
-    while (j>=0) {
+    while (j-1>=0) {
         check = arr[j]%2;
         if (check == 0) {
             printf("%d ",arr[j]);
