@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int m1[1000][1000];
-    int m2[1000][1000];
-    int ans[1000][1000];
+    int m1[100][100];
+    int m2[100][100];
+    int ans[100][100];
     int r1,r2,c1,c2,n,sum;
     printf("Enter number of rows of first matrix ");
     scanf("%d",&r1);
@@ -14,7 +14,7 @@ int main() {
     printf("Enter number of columns of second matrix ");
     scanf("%d",&c2);
     if (c1 != r2) {
-        printf("Invalid matrixes");
+        printf("Invalid matrices");
         return 0;
     }
     for (int i =0;i<r1;i++) {
