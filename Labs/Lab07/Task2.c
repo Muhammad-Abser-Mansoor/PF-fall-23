@@ -1,6 +1,6 @@
 /* Programmer: Muhammad Abser mansoor
 * Date: 10/10/2023
-* Task: Create a code to divide 2 inputs without using divisor function.
+* Task: Shift a user inputted array to the left by d positions.
 */
 
 #include <stdio.h>
