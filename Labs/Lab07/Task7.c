@@ -1,34 +1,52 @@
 /* Programmer: Muhammad Abser mansoor
 * Date: 10/10/2023
-* Task: Rearrange an array in ascending order.
+* Task: Matrix Multiplication.
 */
 
 #include <stdio.h>
-/* Date: 10/10/2023
-* desc: Rearranges an array in ascending order.
-* arg: Takes 
-*/
-int Rearrangement() {
-    int ar[1000]={0};
-    int n,s,a;
-    printf("Enter size of array ");
-    scanf("%d",&s);
-    for (int i = 0;i<s;i++) {
-        printf("Enter element ");
-        scanf("%d",&n);
-        ar[i] = n;
+
+int main() {
+    int m1[100][100];
+    int m2[100][100];
+    int ans[100][100];
+    int r1,r2,c1,c2,n,sum;
+    printf("Enter number of rows of first matrix ");
+    scanf("%d",&r1);
+    printf("Enter number of columns of first matrix ");
+    scanf("%d",&c1);
+    printf("Enter number of rows of second matrix ");
+    scanf("%d",&r2);
+    printf("Enter number of columns of second matrix ");
+    scanf("%d",&c2);
+    if (c1 != r2) {
+        printf("Invalid matrices");
+        return 0;
     }
-    int check = 0;
-    for (int i = 0;i<s;i++) {
-        check = ar[i]
-        for (int j = 0;j<s;j++) {
-            if (check < ar[j]) {
-                a++;
-            }
-            if (a==n-2) {
-             ar[i] =    
-            }
+    for (int i =0;i<r1;i++) {
+        for (int j = 0;j<c1;j++) {
+            printf("Enter element ");
+            scanf("%d",&n);
+            m1[i][j]=n;
         }
+    }
+    for (int i =0;i<r2;i++) {
+        for (int j = 0;j<c2;j++) {
+            printf("Enter element ");
+            scanf("%d",&n);
+            m2[i][j]=n;
+        }
+    }
+    int k = 0;
+    for (int i = 0;i<r1;i++) {
+        for (int j = 0;j<c2;j++) {
+            k = 0;
+            for (int l = 0;l<r2;l++) {
+                ans[i][j] += m1[i][k]*m2[l][j];
+                k++;
+            }
+            printf("%d ",ans[i][j]);
+        }
+        printf("\n");
     }
     return 0;
 }//end main
