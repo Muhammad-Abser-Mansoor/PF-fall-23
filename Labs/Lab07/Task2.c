@@ -16,7 +16,7 @@ int main() {
         scanf("%d",&a);
         ar[i]=a;
     }
-    printf("How many positions to the right do you want to shift? " );
+    printf("How many positions to the left do you want to shift? " );
     scanf("%d",&d);
     for (int i = 0;i<n;i++) {
         if (i+d<n) {
