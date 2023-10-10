@@ -13,11 +13,15 @@ int main() {
     scanf("%d",&n2);
     if (n1 < n2) {
         for (i = 0;n2 > 0;i++) {
+             if (n2 < n1) {
+                 break; }
             n2 = n2-n1;
         }
     }
     else {
         for (i = 0;n1 > 0;i++) {
+             if (n1 < n2) {
+                 break; }
             n1 = n1-n2;
         }
     }
