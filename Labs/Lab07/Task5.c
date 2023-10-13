@@ -1,25 +1,30 @@
+/*Programmer: Muhammad Abser Mansoor
+* Date: 13/10/2023
+* Desc.: Print a br'ish man in a to' ha'    
+*/
+
 #include <stdio.h>
 
 int main() {
     int i=0;
         while (i<3) {
-            printf("\t\t*****\t\t");
+            printf("\t*****\n");
             i++;
         }
         while (i==3) {
-            printf("*********************");
+            printf(" *********************\n");
             i++;
         }
         while (i==4) {
-            printf("\t\t*\t*\t\t");
+            printf("\t*   *\n");
             i++;
         }
         while (i==5) {
-            printf("\t\t\t|\t\t\t");
+            printf("\t  |  \n");
             i++;
         }
         while (i==6) {
-            printf("\t\t\\__/\t\t");
+            printf("\t \\__/ \n");
             i++;
         }
         while (i==7) {
@@ -27,29 +32,28 @@ int main() {
             i++;
         }
         while (i==8) {
-            printf("\t\t|\t|\t\t");
+            printf("\t | |\n");
             i++;
         }
         while (i==9) {
-            printf("*********************");
+            printf("**********************\n");
             i++;
         }
         while (i<14) {
-            printf("**\t*****\t**");
+            printf("    **  *****  **\n");
             i++;
         }
         while (i==14) {
-            printf("\t\t*****\t\t");
+            printf("\t*****\n");
             i++;
         }
         while (i<20) {
-            printf("\t\t**\t**\t\t");
+            printf("\t** **\n");
             i++;
         }
         while (i==20) {
-            printf(" *****\t***** ");
-            
-            i++
+            printf("     ***** ***** \n");
+            i++;
         }
     return 0;
 } //end main()
