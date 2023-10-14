@@ -26,7 +26,6 @@ void Maxlocal (int n) { // This function creates an n by n grid which is then fi
                 }
             }
             Maxlocal[k][m]=g; // Input the greatest value in Maxlocal
-            }
         }
     }
     for (int i = 0;i<n-2;i++) { // Printing Maxlocal
