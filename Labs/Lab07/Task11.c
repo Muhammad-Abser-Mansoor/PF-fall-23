@@ -6,6 +6,9 @@
 #include <stdio.h>
 void Maxlocal (int n) { // This function creates an n by n grid which is then filled with 3 by 3 matrices and the the greatest value of each matrix is assigned to the maxlocal matrix
     int f,g,mli,mlj = 0; // Input variable and variable to isolate greatest value and 2 address variables for the Maxlocal matrix
+    if (n%3 != 0) {
+        n = n-n%3; 
+    }
     int matrix[n+2][n+2]; // 2D array initialised to take inputs in the form of 3x3 matrices.
     int Maxlocal[n-2][n-2]; // Maxlocal matrix
     for (int k = 0;k<n;k=k+3) { // Rows of the grid
