@@ -8,8 +8,8 @@ void Maxlocal (int n) { // This function creates an n by n grid which is then fi
     int f,g,mli,mlj = 0; // Input variable and variable to isolate greatest value and 2 address variables for the Maxlocal matrix
     int matrix[n+2][n+2]; // 2D array initialised to take inputs in the form of 3x3 matrices.
     int Maxlocal[n-2][n-2]; // Maxlocal matrix
-    for (int k = 0;k<=n;k+3) { // Rows of the grid
-        for (int m = 0;m<=n;m+3) { // Columns of the grid
+    for (int k = 0;k<n;k=k+3) { // Rows of the grid
+        for (int m = 0;m<n;m=m+3) { // Columns of the grid
             for (int i = k;i<k+3;i++) { // Rows of 3x3 matrix
                 for (int j = m;j<m+3;j++) { // columns of 3x3 matrix
                     printf("Enter element ");
@@ -32,21 +32,22 @@ void Maxlocal (int n) { // This function creates an n by n grid which is then fi
                 }
             }
             Maxlocal[mli][mlj]=g; // Input the greatest value in Maxlocal
-            printf("Maxlocal value is %d\n",Maxlocal[mli][mlj]); // Printing the values of Maxlocal for reference and debugging
+            printf("Maxlocal value is %d\n",Maxlocal[mli][mlj]);
             mlj++; // Moving to next column
-            if (mlj == n-2) {
+             if (mlj == n-2) {
                 mli++;
                 mlj = 0;// Moving to next row
+            }
         }
         printf("\n");
     }
-    for (int i = 0;i<mli;i++) { // Printing Maxlocal
-        for (int j = 0;j<mlj;j++) {
+    for (int i = 0;i<=n-2;i++) { // Printing Maxlocal
+        for (int j = 0;j<n-2;j++) {
             printf("%d, ",Maxlocal[i][j]);
         }
         printf("\n"); // Moving to next row
     }
-    return;
+    return Maxlocal;
 }
 int main() {
     int n = 0;
