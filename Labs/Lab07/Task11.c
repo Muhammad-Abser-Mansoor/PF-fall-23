@@ -35,7 +35,7 @@ void Maxlocal (int n) {
 }
 int main() {
     int n = 0;
-    printf("Enter size of n by n matrix ");
+    printf("Enter size of n by n grid ");
     scanf("%d",&n);
     Maxlocal(n);
     return 0;
