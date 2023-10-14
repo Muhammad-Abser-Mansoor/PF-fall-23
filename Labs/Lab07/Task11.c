@@ -32,7 +32,7 @@ void Maxlocal (int n) { // This function creates an n by n grid which is then fi
                 }
             }
             Maxlocal[mli][mlj]=g; // Input the greatest value in Maxlocal
-            printf("Maxlocal value %d",Maxlocal[mli][mlj]); // Printing the values of Maxlocal for reference and debugging
+            printf("Maxlocal value is %d\n",Maxlocal[mli][mlj]); // Printing the values of Maxlocal for reference and debugging
             mlj++; // Moving to next column
             if (mlj == n-2) {
                 mli++;
