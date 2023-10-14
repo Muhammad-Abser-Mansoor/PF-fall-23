@@ -8,8 +8,8 @@ void Maxlocal (int n) { // This function creates an n by n grid which is then fi
     int f,g,mli,mlj = 0; // Input variable and variable to isolate greatest value and 2 address variables for the Maxlocal matrix
     int matrix[n+2][n+2]; // 2D array initialised to take inputs in the form of 3x3 matrices.
     int Maxlocal[n-2][n-2]; // Maxlocal matrix
-    for (int k = 0;k<n*n;k+3) { // Rows of the grid
-        for (int m = 0;m<n*n;m+3) { // Columns of the grid
+    for (int k = 0;k<=n*n;k+3) { // Rows of the grid
+        for (int m = 0;m<=n*n;m+3) { // Columns of the grid
             for (int i = k;i<k+3;i++) { // Rows of 3x3 matrix
                 for (int j = m;j<m+3;j++) { // columns of 3x3 matrix
                     printf("Enter element ");
