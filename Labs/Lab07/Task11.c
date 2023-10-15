@@ -9,8 +9,8 @@ void Maxlocal (int n) { // This function creates an n by n grid which is then fi
     if (n%3 != 0) {
         n = n-n%3; 
     }
-    int matrix[n+2][n+2]; // 2D array initialised to take inputs in the form of 3x3 matrices.
-    int Maxlocal[n-2][n-2]; // Maxlocal matrix
+    int matrix[n][n]; // 2D array initialised to take inputs in the form of 3x3 matrices.
+    int Maxlocal[n-(n-n/3)][n-(n-n/3)]; // Maxlocal matrix
     for (int k = 0;k<n;k=k+3) { // Rows of the grid
         for (int m = 0;m<n;m=m+3) { // Columns of the grid
             for (int i = k;i<k+3;i++) { // Rows of 3x3 matrix
@@ -37,15 +37,15 @@ void Maxlocal (int n) { // This function creates an n by n grid which is then fi
             Maxlocal[mli][mlj]=g; // Input the greatest value in Maxlocal
             printf("Maxlocal value is %d\n",Maxlocal[mli][mlj]);
             mlj++; // Moving to next column
-             if (mlj == n-2) {
+             if (mlj == n-(n-n/3)) {
                 mli++;
                 mlj = 0;// Moving to next row
             }
         }
         printf("\n");
     }
-    for (int i = 0;i<=n-2;i++) { // Printing Maxlocal
-        for (int j = 0;j<n-2;j++) {
+    for (int i = 0;i<=n-(n-n/3);i++) { // Printing Maxlocal
+        for (int j = 0;j<n-(n-n/3);j++) {
             printf("%d, ",Maxlocal[i][j]);
         }
         printf("\n"); // Moving to next row
