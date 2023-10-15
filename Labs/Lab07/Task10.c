@@ -8,7 +8,7 @@ void Subarray(int *arr, int n, int s) {
         for (int j = i, sum = 0; j < n && sum < s; j++) {
             sum += arr[j]; 
             if (sum == s) { 
-                printf("%d to %d", i, j); 
+                printf("from index %d to index %d", i, j); 
                 return;
                 }
         }
