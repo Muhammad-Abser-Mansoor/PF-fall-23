@@ -25,6 +25,7 @@ int main() {
     for (int i = 0;i < f;i++) {
         printf("Enter element of array ");
         scanf("%d",&n);
+        ar[i] = n;
     }
     Subarray(ar,f,a);
     return 0;
