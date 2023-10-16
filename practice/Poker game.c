@@ -78,11 +78,10 @@ bool Highcard (char t, int ar) {
 }
 
 int main() {
-    int ar[100];
-    char t[100];
+    int ar1[100],ar2[100];
+    char t1[100],t2[100];
     char b;
     int a;
-    for (int k = 0;k<2;k++) {
     for (int i = 0;i<5;i++) {
         printf("Enter card type as D/S/C/H");
         scanf(" %c",&b);
@@ -90,14 +89,47 @@ int main() {
             printf("Invalid");
             return 0;
         }
-        t[i] = b;
+        t1[i] = b;
         printf("Enter card number or K/Q/J/A as 11 through 14");
         scanf("%d",&a);
         if (a > 14 || a < 1) {
             printf("Invalid");
             return 0;
         }
-        ar[i] = a;
+        ar1[i] = a;
     }
+    for (int i = 0;i<5;i++) {
+        printf("Enter card type as D/S/C/H");
+        scanf(" %c",&b);
+        if (b != 'D' || b != 'S' || b != 'C' || b != 'H') {
+            printf("Invalid");
+            return 0;
+        }
+        t2[i] = b;
+        printf("Enter card number or K/Q/J/A as 11 through 14");
+        scanf("%d",&a);
+        if (a > 14 || a < 1) {
+            printf("Invalid");
+            return 0;
+        }
+        ar2[i] = a;
     }
-    
+    if (fourofakind(t1, ar1) == true && fourofakind(t2, ar2) == false) {
+        printf("player 1 wins");
+    }
+    else if (fourofakind(t2, ar2) == true && fourofakind(t1, ar1) == false)  {
+        printf("Player 2 wins");
+    }
+    else if (twopair(t2, ar2) == true && twopair(t1, ar1) == false)  {
+        printf("Player 2 wins");
+    }
+    else if (twopair(t1, ar1) == true && twopair(t2, ar2) == false) {
+        printf("player 1 wins");
+    }
+    else if (Highcard(t1, ar1) == true && Highcard(t2, ar2) == false) {
+        printf("player 1 wins");
+    }
+    else if (Highcard(t1, ar1) == false && Highcard(t2, ar2) == true) {
+        printf("player 2 wins");
+    }
+    return 0;
