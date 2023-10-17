@@ -49,7 +49,7 @@ bool twopair (char t, int ar) {
             b++;
         }
     }
-    if (b < 2) {
+    if (b < 4) {
         return false;
     }
     else {
