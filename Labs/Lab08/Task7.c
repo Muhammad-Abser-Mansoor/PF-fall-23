@@ -15,11 +15,11 @@
 double calculateDiscount(int times,double price) {
     double discount = 0;
     if (times > 10 && price >= 50) {
-        discount = price - (price*0.15);
+        discount = price*0.15;
         return discount;
     }
     else if (times > 5 && price >= 30) {
-        discount = price - (price*0.1);
+        discount = price*0.1;
         return discount;
     }
     else {
