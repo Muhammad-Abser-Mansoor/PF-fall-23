@@ -8,11 +8,12 @@
 int main() {
     int ar[100][100];
     int a,b,c;
-    int avg,max,fif,hun,sum=0;
+    int avg,max,fif,sum=0;
     printf("Enter total number of batsmen ");
     scanf("%d",&a);
     for (int i = 0;i<a;i++) {
-        avg,max,fif,hun,sum=0;
+        avg,max,fif,sum=0;
+        int hun = 0;
         printf("Enter number of batsman %d ",i+1);
         scanf("%d",&b);
         ar[i][0] = b;
