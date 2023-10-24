@@ -1,3 +1,8 @@
+ /* 
+  * Programmer: Muhammad Abser Mansoor
+  * Date: 24/10/2023
+  * Desc: Create a database for the performance of batsmen
+  */
 #include <stdio.h>
 
 int main() {
@@ -30,4 +35,4 @@ int main() {
         printf("Statistics of Batsmen with id %d:\nHighest score in a single inning:%d\nNumber of fifties:%d\nNumber of hundreds:%d\nAverage runs in innings:%d\nTotal runs scored:%d\n",ar[i][0],max,fif,hun,avg,sum);
     } 
     return 0;
-}
+} //end main
