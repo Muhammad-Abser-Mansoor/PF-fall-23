@@ -1,3 +1,9 @@
+ /* 
+  * Programmer: Muhammad Abser Mansoor
+  * Date: 24/10/2023
+  * Desc: Find submatrix containing only 1s in a larger binary matrix.
+  */
+
 #include <stdio.h>
 
 int main() {
