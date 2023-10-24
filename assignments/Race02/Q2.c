@@ -10,7 +10,7 @@ int main() {
     int ar[100][100];
     int one[100][100];
     int a,b,c;
-    int avg,max,fif,hun,sum=0;
+    int g=0;
     printf("Enter columns of matrix ");
     scanf("%d",&b);
     printf("Enter rows of matrix ");
@@ -20,9 +20,13 @@ int main() {
             printf("Enter 1 or 0 in matrix position (%d,%d) ",i,j);
             scanf("%d",&ar[i][j]);
             if (ar[i][j] != 0 && ar[i][j] != 1) {
-                printf("Ya done fked up");
+                printf("Ya done fked up\n");
+                g++;
                 break;
             }
+        }
+        if (g != 0) {
+            break;
         }
     }
     int p=0;
@@ -54,10 +58,10 @@ int main() {
             }
             
         }
-        if (m == a-1 && n == a-1) {
+        if (m == p-1 && n == p-1) {
             break;
         }
     }
-    printf("largest submatrix of 1s is a %dx%d",a,a);
+    printf("largest submatrix of 1s is a %dx%d",m,n);
     return 0;
-}
+}//end main
