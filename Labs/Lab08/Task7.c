@@ -1,7 +1,7 @@
 /* 
   * Programmer: Muhammad Abser Mansoor
   * Date: 24/10/2023
-  * Desc: Do operations on an array
+  * Desc: Find discount given the price and times visited in a month
   */
 
 #include <stdio.h>
@@ -10,7 +10,7 @@
  /* 
   * Programmer: Muhammad Abser Mansoor
   * Date: 24/10/2023
-  * Desc: Find Max
+  * Desc: Takes input price and times visited in a month as arguments and finds discount
   */
 double calculateDiscount(int times,double price) {
     double discount = 0;
