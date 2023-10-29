@@ -1,41 +1,40 @@
 #include <stdio.h>
- /* Desc: Sort age in ascending order
-  */
-void ascendage(int ar[][3],int n) {
-    int temp,k = 0;
-    for (int i = 0;i<n;i++) {
-        temp = ar[i][0];
-        for (int j = 0;j<n;j++) {
-            if (ar[i][0] > ar[j][0]) {
+/*Desc.: Sorts array as ascending order in age*/
+void ascendage(int ar[][2], int n) {
+    int temp;
+    for (int j = 0; j < n; j++) {
+        int k = 0; 
+        temp = ar[j][1];
+        for (int m = 0; m < n; m++) {
+            if (ar[j][1] > ar[m][1]) {
                 k++;
-            }            
+            }
         }
-        ar[k][0] = temp;
-    }
-    return;
-}
- /* Desc: Sort price in descending order
-  */
-void descendprice(int ar[][3],int n) {
-    int temp,k = 0;
-    for (int j = 0,l=1;j<n;j++) {
-    temp = ar[j][1];
-        for (int m = 0;m<n;m++) {
-            if (ar[j][1] < ar[m][1]) {
-                k++;
-            }            
-        }
+        ar[j][1] = ar[k][1];
         ar[k][1] = temp;
     }
-    return;
 }
- /* 
-  * Programmer: Muhammad Abser Mansoor
-  * Date: 24/10/2023
-  * Desc: Sort a database containing info about shirts
-  */
+/*Desc.: Sorts array as descending order in price*/
+void descendprice(int ar[][2], int n) {
+    int temp;
+    for (int j = 0; j < n; j++) {
+        int k = 0; 
+        temp = ar[j][1];
+        for (int m = 0; m < n; m++) {
+            if (ar[j][1] < ar[m][1]) {
+                k++;
+            }
+        }
+        ar[j][1] = ar[k][1];
+        ar[k][1] = temp;
+    }
+}
+/*Programmer: Abser Mansoor
+ *Date:29/10/2023
+ *Desc.: Modify a database of multiple shirts for different ages with different prices
+ */
 int main() {
-    int ar[100][100];
+    int ar[100][2];
     int a,b,n,v = 0;
     int price[100];
     int age[100];
