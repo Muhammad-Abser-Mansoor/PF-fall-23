@@ -1,5 +1,8 @@
-/* Programmer: Abser Mansoor
- * 
+ /* 
+  * Programmer: Muhammad Abser Mansoor
+  * Date: 26/10/2023
+  * Desc: Create a program to check availability of flights with respect to customer preference and also provide interface
+  */
 
 #include <stdio.h>
 #include <string.h>
