@@ -13,7 +13,7 @@ int dupcheck(int y[],int t[],int v,int cur1,int cur2) {
 /* 
   * Programmer: Muhammad Abser Mansoor
   * Date: 24/10/2023
-  * Desc: Create a database for the performance of batsmen
+  * Desc: Find pairs of numbers in an array that add up to an input
   */
 int main() {
     int ar[1000];
