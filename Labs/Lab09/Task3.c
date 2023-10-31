@@ -30,4 +30,4 @@ int main() {
 		printf("%c\t%p   \n",*(arrr+i),(arrr+i)); // and here
 	}
 	return 0;
-}
+}  //end main
