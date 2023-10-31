@@ -19,3 +19,4 @@ int main(){
 	printf("j=%d, k=%d\n", j,k);
 	return 0;
 }
+//  The desired values were not outputted because of lack of pointers
