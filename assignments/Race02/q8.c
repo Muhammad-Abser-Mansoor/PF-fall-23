@@ -14,7 +14,7 @@ int main() {
         orig = n;
         while (n>9) {
             int num = 1;
-            for (int j = 0;n>0;n = n/10) {
+            for (int j = 0;n>9;n = n/10) {
             num = num*n%10;
             n/=10;
         }
