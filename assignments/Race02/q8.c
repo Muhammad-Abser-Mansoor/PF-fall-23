@@ -16,7 +16,6 @@ int main() {
             int num = 1;
             for (int j = 0;n>9;n = n/10) {
             num = num*n%10;
-            n/=10;
         }
         n = num;
         a++;
