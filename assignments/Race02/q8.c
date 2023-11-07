@@ -20,7 +20,7 @@ int main() {
         n = num;
         a++;
         }
-        printf("persistence of %d is %d\n",n,a);
+        printf("persistence of %d is %d\n",orig,a);
         printf("Is that all? y/n ");
         scanf(" %c",&x);
         if (x == 'y') {
