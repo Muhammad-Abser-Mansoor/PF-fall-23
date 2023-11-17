@@ -30,8 +30,8 @@ int main() {
     int j = 2;
     char t = 'a';
     char y = 'b';
-    long a = 1.100;
-    long b = 2.200;
+    long a = 10000000;
+    long b = 20000000;
     swap((void *) &i,(void *) &j,'i');
     printf("\n");
     swap((void *) &t,(void *) &y,'c');
