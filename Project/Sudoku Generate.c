@@ -54,7 +54,7 @@ void CreatematrixMD() {
     }
     for (int i = 0;i<9;i++) { // Printing the initial matrix
         for (int j = 0;j<9;j++) {
-            printf("%d  ",ar[i][j]);
+            (ar[i][j]) ? printf("%d ",ar[i][j]) : printf("  ");
         }
         printf("\n");
     }
