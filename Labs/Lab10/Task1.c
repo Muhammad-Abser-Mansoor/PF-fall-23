@@ -1,3 +1,8 @@
+/*Programmer: Muhammad Abser Mansoor
+ *Date: 11/20/2023
+ *Desc.:Create a Universal array printing function using pointers and variable casting to disregard differences in data types.
+ */
+
 #include <stdio.h>
 void uniprint(void *arr,int size,char type) {
     for (int i = 0;i<size;i++) {
