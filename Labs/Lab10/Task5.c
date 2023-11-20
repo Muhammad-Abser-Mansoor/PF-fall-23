@@ -45,10 +45,13 @@ float timing(int **ar,int m,int n) {
 }
 
 int main() {
-    int m = 100;
-    int n = 100;
+    int m,n;
+    printf("Enter m ");
+    scanf("%d",&n);
+    printf("Enter n ");
+    scanf("%d",&n);
     int **ar1 = Arr1(m,n);
     int **ar2 = Arr2(m,n);
-    printf("Time is %.fms for array 1\nTime is %.fms for array 2",timing(ar1,m,n)*1000,timing(ar2,m,n))*1000;
+    printf("Time is %.fms for array 1\nTime is %.fms for array 2",timing(ar1,m,n)*10000,timing(ar2,m,n))*10000;
     return 0;
 }
