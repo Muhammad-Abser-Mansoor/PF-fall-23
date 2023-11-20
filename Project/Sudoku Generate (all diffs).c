@@ -4,8 +4,9 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Arguements include the initial array, the randomly chosen coordinates, the random number and dimension of the square matrix
 // Checking columns and rows to see if any column or row collinear to the coordinates has a number equal to the inputted number
-int Checkrowscolumns(int ar[][9],int randposr,int randposc,int num,int length) {
+int Checkrowscolumns(int ar[][12],int randposr,int randposc,int num,int length) {
     for (int k = 0;k<length;k++) { 
         if (num == ar[randposr][k] || num == ar[k][randposc]) {
            return 0; 
@@ -15,7 +16,7 @@ int Checkrowscolumns(int ar[][9],int randposr,int randposc,int num,int length) {
 }
 
 
-int Checksubblock(int ar[][9],int randposr,int randposc,int num,int sr,int sc) {
+int Checksubblock(int ar[][12],int randposr,int randposc,int num,int sr,int sc) {
     int srow = sr * (randposr / sr);
     int scolumn = sc * (randposc / sc);
     for (int k = srow;k<srow + sr;k++) { // Now check the 3x3 subblock that the address belongs to and find if any equal value exists
@@ -45,7 +46,7 @@ void CreatematrixMD() {
         if (ar[randposr][randposc] == 0) { // Checks if there is no clue present
 
             num = (rand() % (9)) + 1; // Inputs a random number between 1 and 9 into num variable
-           
+           // If statement checks the functions return values to see if num passes the sudoku rules
             if (Checkrowscolumns(ar,randposr,randposc,num,9) == 1 && Checksubblock(ar,randposr,randposc,num,subblockrows,subblockcolumns) == 1) {
                 
                 ar[randposr][randposc] = num;
@@ -69,7 +70,7 @@ void CreatematrixED() {
     int subblockcolumns = 3;
     int num = 0;
     srand(time(NULL));
-    for (int i = 0;clue < 14;i++) { // Loop for inserting 12 clues within the empty matrix
+    for (int i = 0;clue < 14;i++) { // Loop for inserting 14 clues within the empty matrix
         
         int randposr = (rand() % (6));
 
@@ -77,8 +78,8 @@ void CreatematrixED() {
         
         if (ar[randposr][randposc] == 0) { // Checks if there is no clue present
 
-            num = (rand() % (6)) + 1; // Inputs a random number between 1 and 9 into num variable
-           
+            num = (rand() % (6)) + 1; // Inputs a random number between 1 and 6 into num variable
+           // If statement checks the functions return values to see if num passes the sudoku rules
             if (Checkrowscolumns(ar,randposr,randposc,num,6) == 1 && Checksubblock(ar,randposr,randposc,num,subblockrows,subblockcolumns) == 1) {
                 
                 ar[randposr][randposc] = num;
@@ -96,13 +97,13 @@ void CreatematrixED() {
 }
 
 void CreatematrixHD() {
-    int ar[12][12] = {0}; // Creating a Sudoku Matrix (Easy Difficullty)
+    int ar[12][12] = {0}; // Creating a Sudoku Matrix (Hard Difficullty)
     int clue = 0;
     int subblockrows = 3;
     int subblockcolumns = 4;
     int num = 0;
     srand(time(NULL));
-    for (int i = 0;clue < 37;i++) { // Loop for inserting 12 clues within the empty matrix
+    for (int i = 0;clue < 37;i++) { // Loop for inserting 37 clues within the empty matrix
         
         int randposr = (rand() % (12));
 
@@ -110,8 +111,8 @@ void CreatematrixHD() {
         
         if (ar[randposr][randposc] == 0) { // Checks if there is no clue present
 
-            num = (rand() % (12)) + 1; // Inputs a random number between 1 and 9 into num variable
-           
+            num = (rand() % (12)) + 1; // Inputs a random number between 1 and 12 into num variable
+           // If statement checks the functions return values to see if num passes the sudoku rules
             if (Checkrowscolumns(ar,randposr,randposc,num,12) == 1 && Checksubblock(ar,randposr,randposc,num,subblockrows,subblockcolumns) == 1) {
                 
                 ar[randposr][randposc] = num;
@@ -139,5 +140,5 @@ int main() {
     CreatematrixMD();
     printf("\n");
     CreatematrixHD();
-    return 1;
+    return 0;
 }
