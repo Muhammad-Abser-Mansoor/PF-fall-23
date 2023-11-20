@@ -88,8 +88,8 @@ void CreatematrixED() {
             }
         }
     }
-    for (int i = 0;i<9;i++) { // Printing the initial matrix
-        for (int j = 0;j<9;j++) {
+    for (int i = 0;i<6;i++) { // Printing the initial matrix
+        for (int j = 0;j<6;j++) {
             printf("%d  ",ar[i][j]);
         }
         printf("\n");
@@ -123,8 +123,8 @@ void CreatematrixHD() {
     }
     for (int i = 0;i<12;i++) { // Printing the initial matrix
         for (int j = 0;j<12;j++) {
-            if (ar[i][j] > 10) {
-                printf("%c  ",ar[i][j] + 55);
+            if (ar[i][j] >= 10) {
+                printf("%c  ",ar[i][j] + 55); // If a number is greater than 9 then capitalized characters are used to represent them
             }
             else {
                 printf("%d  ",ar[i][j]);
