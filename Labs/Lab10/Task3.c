@@ -21,7 +21,8 @@ int **createarray(int x, int y) {
 	}
 	for (int i = 0, num = 2; i < y; i++) {
 		for (int j = 0; j < x; j++) {
-			for(;!prime(num);num++);
+			for(;!prime(num);num++) {
+			}
 			ar[i][j] = num++;
 		}
 	}
