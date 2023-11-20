@@ -45,7 +45,9 @@ void CreatematrixMD() {
         if (ar[randposr][randposc] == 0) { // Checks if there is no clue present
 
             num = (rand() % (9)) + 1; // Inputs a random number between 1 and 9 into num variable
-           // If statement checks the functions return values to see if num passes the sudoku rules
+            
+            // If statement checks the functions return values to see if num passes the sudoku rules
+            
             if (Checkrowscolumns(ar,randposr,randposc,num,9) == 1 && Checksubblock(ar,randposr,randposc,num,subblockrows,subblockcolumns) == 1) {
                 
                 ar[randposr][randposc] = num;
