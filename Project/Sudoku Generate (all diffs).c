@@ -17,9 +17,9 @@ int Checkrowscolumns(int ar[][12],int randposr,int randposc,int num,int length) 
 
 
 int Checksubblock(int ar[][12],int randposr,int randposc,int num,int sr,int sc) {
-    int srow = sr * (randposr / sr);
+    int srow = sr * (randposr / sr); // sr and sc are the dimensions of the subblocks
     int scolumn = sc * (randposc / sc);
-    for (int k = srow;k<srow + sr;k++) { // Now check the 3x3 subblock that the address belongs to and find if any equal value exists
+    for (int k = srow;k<srow + sr;k++) { // Now check the subblock that the address belongs to and find if any equal value exists
         for (int j = scolumn;j<scolumn + sc;j++) {
             if (num == ar[k][j]) {
                 return 0;
