@@ -36,7 +36,6 @@ void CreatematrixMD() {
     int subblockrows = 3;
     int subblockcolumns = 3;
     int num = 0;
-    srand(time(NULL));
     for (int i = 0;clue < 22;i++) { // Loop for inserting 22 clues within the empty matrix
         
         int randposr = (rand() % (9));
@@ -69,7 +68,6 @@ void CreatematrixED() {
     int subblockrows = 2;
     int subblockcolumns = 3;
     int num = 0;
-    srand(time(NULL));
     for (int i = 0;clue < 14;i++) { // Loop for inserting 14 clues within the empty matrix
         
         int randposr = (rand() % (6));
@@ -102,7 +100,6 @@ void CreatematrixHD() {
     int subblockrows = 3;
     int subblockcolumns = 4;
     int num = 0;
-    srand(time(NULL));
     for (int i = 0;clue < 37;i++) { // Loop for inserting 37 clues within the empty matrix
         
         int randposr = (rand() % (12));
@@ -135,6 +132,7 @@ void CreatematrixHD() {
 }
 
 int main() {
+    srand(time(NULL));
     CreatematrixED();
     printf("\n");
     CreatematrixMD();
