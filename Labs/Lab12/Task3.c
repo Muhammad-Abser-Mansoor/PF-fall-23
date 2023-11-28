@@ -31,6 +31,9 @@ int main() {
         fprintf(f,"%d,%s,%f,%d,%d\n",c[i].code,c[i].name,c[i].gpa,c[i].sem,c[i].cred);
     }
     fclose(f);
+    int sems[4];
+    int CGPA[100];
+    int SGPA[100];
     char x;
     printf("View transcript? y or n  ");
     scanf(" %c",&x);
@@ -46,6 +49,20 @@ int main() {
     scanf(" %c",&g);
     if (g == 'y') {
         FILE *f = fopen("info.txt","r");
-
+        char gt[200];
+        fgets(gt,200,f);
+        sscanf(gt,"%d,%s,%f,%d,%d",);
+        
+        fclose(f);
+    }
+    char gf;
+    printf("Calculate CGPA? y or n  ");
+    scanf(" %c",&gf);
+    if (gf == 'y') {
+        FILE *f = fopen("info.txt","r");
+        char gl[200];
+        fgets(gl,200,f);
+        printf("%s",gl);
+        fclose(f);
     }
 }
