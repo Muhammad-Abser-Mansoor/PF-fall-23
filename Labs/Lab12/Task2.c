@@ -1,6 +1,6 @@
 /* Programmer: Muhammad Abser mansoor
  * Date: 10/10/2023
- * Task: Reading a CSV file and outputting in a specified format
+ * Task: Take 2 docx files and open and compare their binary counterparts
  */
 #include<stdio.h>
 #include<stdlib.h>
