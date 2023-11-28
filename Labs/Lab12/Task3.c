@@ -1,6 +1,6 @@
 /* Programmer: Muhammad Abser mansoor
  * Date: 10/10/2023
- * Task: Reading a CSV file and outputting in a specified format
+ * Task: Create and store data using filing and structs
  */
 #include<stdio.h>
 #include<stdlib.h>
@@ -10,6 +10,7 @@ struct course {
     int code;
     char name[100];
     float gpa;
+    int cred;
     int sem; // struct initialisation
 };
 
@@ -20,12 +21,14 @@ int main() {
         printf("Enter course code ");
         scanf("%d",&c[i].code);
         printf("Enter Course Name ");
-        scanf("%s",&c[i].name);
+        scanf("%s",c[i].name);
         printf("Enter GPA "); // Taking 3 inputs for each struct variable
         scanf("%f",&c[i].gpa);
         printf("Enter Semester ");
         scanf("%d",&c[i].sem);
-        fprintf(f,"%d,%s,%f,%d\n",c[i].code,c[i].name,c[i].gpa,c[i].sem);
+        printf("Enter Semester ");
+        scanf("%d",&c[i].cred);
+        fprintf(f,"%d,%s,%f,%d,%d\n",c[i].code,c[i].name,c[i].gpa,c[i].sem,c[i].cred);
     }
     fclose(f);
     char x;
@@ -43,6 +46,6 @@ int main() {
     scanf(" %c",&g);
     if (g == 'y') {
         FILE *f = fopen("info.txt","r");
-        
+
     }
 }
