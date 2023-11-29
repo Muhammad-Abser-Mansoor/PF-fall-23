@@ -1,4 +1,11 @@
+/* Programmer: Abser Mansoor
+ * Date: 23/11/2023
+ * Desc.: Use structs to store date and display change after 45 days are added
+ */
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct Date {
     int day;
