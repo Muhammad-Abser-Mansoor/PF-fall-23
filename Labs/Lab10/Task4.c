@@ -9,36 +9,36 @@
 #include <string.h>
 
 char *reverse(char *str, int size) {
-	char *new_str = (char *)malloc(size+2);
-	*new_str = '\0', strncat(new_str, str, size);
+	char *news = (char *)malloc(size+2);
+	*news = '\0', strncat(news, str, size);
 	for (int i = 0; i < size/2; i++) {
-		char temp = new_str[i];
-		new_str[i] = new_str[size - i -1], new_str[size - i -1] = temp;
+		char temp = news[i];
+		news[i] = news[size - i -1], news[size - i -1] = temp;
 	}
-	strcat(new_str, " ");
-	return new_str;
+	strcat(news, " ");
+	return news;
 }
 
 
 char *spin(char *str) {
-	char *new_str = (char *)malloc(strlen(str)+1), *front = str, *back = str;
-	memset(new_str, '\0', strlen(str)+1);
+	char *news = (char *)malloc(strlen(str)+1), *front = str, *back = str;
+	memset(news, '\0', strlen(str)+1);
 	while (*front) {
 		if (*(front + 1) == '\0' || *(front + 1) == ' ')  {
-			char *rev = rev_str(back, front-back+1);
-			strcat(new_str, rev), back = front+2;
+			char *rev = reverse(back, front-back+1);
+			strcat(news, rev), back = front+2;
 			free(rev);
 		}
 		front++;
 	}
-	new_str[strlen(str)] = '\0';
-	return new_str;
+	news[strlen(str)] = '\0';
+	return news;
 }
 
 
 int main() {
-	char str[] = "Hello World!", *spun_str = spin_str(str);
-	printf("%s", spun_str);
-	free(spun_str);
+	char str[] = "Hello World!", *spun = spin(str);
+	printf("%s", spun);
+	free(spun);
 	return 0;
 }
