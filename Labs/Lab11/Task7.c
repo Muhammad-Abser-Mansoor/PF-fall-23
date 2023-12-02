@@ -104,6 +104,10 @@ void authoroutput(int books[], int k) { // Outputs all the books by a particular
 
 int main() {
     struct library book[100];
+    book[0] = {2343,"Abser","Failure",1};
+    book[1] = {2311,"Fasih","Effort",1};
+    book[2] = {2312,"Rumaisa","Genius",1};
+    book[3] = {2313,"Ali","Radical",1};
     for (;;){
         int x = 0;
         int i = 0;
