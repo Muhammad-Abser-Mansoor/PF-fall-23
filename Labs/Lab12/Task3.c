@@ -1,68 +1,145 @@
-/* Programmer: Muhammad Abser mansoor
- * Date: 10/10/2023
- * Task: Create and store data using filing and structs
+/* Programmer:Muhammad Abser Mansoor
+ * Date: 28/11/23
+ * Descrption: Student Management System using structs
  */
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
 
-struct course {
-    int code;
-    char name[100];
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_COURSES 10
+
+// Structure to store course information
+struct Course {
+    char code[10];
+    char name[50];
     float gpa;
-    int cred;
-    int sem; // struct initialisation
+    int semester;
 };
 
+// Function to input course information
+void inputCourse(struct Course *course) {
+    printf("Enter Course Code: ");
+    scanf("%s", course->code);
+
+    printf("Enter Course Name: ");
+    scanf("%s", course->name);
+
+    printf("Enter GPA: ");
+    scanf("%f", &course->gpa);
+
+    printf("Enter Semester: ");
+    scanf("%d", &course->semester);
+}
+
+// Function to save course data to a file
+void saveToFile(struct Course *courses, int count) {
+    FILE *file = fopen("transcript.txt", "a");
+
+    if (file == NULL) {
+        perror("Error opening file");
+        exit(EXIT_FAILURE);
+    }
+int i;
+    for (i = 0; i < count; i++) {
+        fprintf(file, "Course Code: %s, Course Name: %s, GPA: %.2f, Semester: %d\n",
+                courses[i].code, courses[i].name, courses[i].gpa, courses[i].semester);
+    }
+
+    fclose(file);
+}
+
+// Function to view transcript
+void viewTranscript() {
+    FILE *file = fopen("transcript.txt", "r");
+
+    if (file == NULL) {
+        perror("Error opening file");
+        exit(EXIT_FAILURE);
+    }
+
+    char ch;
+    while ((ch = fgetc(file)) != EOF) {
+        printf("%c", ch);
+    }
+
+    fclose(file);
+}
+
+// Function to calculate CGPA
+float calculateCGPA(struct Course *courses, int count) {
+    float totalGPA = 0.0;
+int i;
+    for (i = 0; i < count; i++) {
+        totalGPA += courses[i].gpa;
+    }
+
+    return (count > 0) ? totalGPA / count : 0.0;
+}
+
+// Function to calculate SGPA for a specific semester
+float calculateSGPA(struct Course *courses, int count, int semester) {
+    float totalGPA = 0.0;
+    int coursesInSemester = 0;
+int i;
+    for (i = 0; i < count; i++) {
+        if (courses[i].semester == semester) {
+            totalGPA += courses[i].gpa;
+            coursesInSemester++;
+        }
+    }
+
+    return (coursesInSemester > 0) ? totalGPA / coursesInSemester : 0.0;
+}
+
 int main() {
-    struct course c[100]; // struct array
-    FILE *f = fopen("info.txt","a");
-    for (int i = 0;i<1;i++) {
-        printf("Enter course code ");
-        scanf("%d",&c[i].code);
-        printf("Enter Course Name ");
-        scanf("%s",c[i].name);
-        printf("Enter GPA "); // Taking 3 inputs for each struct variable
-        scanf("%f",&c[i].gpa);
-        printf("Enter Semester ");
-        scanf("%d",&c[i].sem);
-        printf("Enter Semester ");
-        scanf("%d",&c[i].cred);
-        fprintf(f,"%d,%s,%f,%d,%d\n",c[i].code,c[i].name,c[i].gpa,c[i].sem,c[i].cred);
-    }
-    fclose(f);
-    int sems[4];
-    int CGPA[100];
-    int SGPA[100];
-    char x;
-    printf("View transcript? y or n  ");
-    scanf(" %c",&x);
-    if (x == 'y') {
-        FILE *f = fopen("info.txt","r");
-        char r[200];
-        fgets(r,200,f);
-        printf("%s",r);
-        fclose(f);
-    }
-    char g;
-    printf("Calculate CGPA? y or n  ");
-    scanf(" %c",&g);
-    if (g == 'y') {
-        FILE *f = fopen("info.txt","r");
-        char gt[200];
-        fgets(gt,200,f);
-        sscanf(gt,"%d,%s,%f,%d,%d",);
-        
-        fclose(f);
-    }
-    char gf;
-    printf("Calculate CGPA? y or n  ");
-    scanf(" %c",&gf);
-    if (gf == 'y') {
-        FILE *f = fopen("info.txt","r");
-        char gl[200];
-        fgets(gl,200,f);
-        printf("%s",gl);
-        fclose(f);
-    }
+    struct Course courses[MAX_COURSES];
+    int count = 0;
+    int option;
+
+    do {
+        printf("\n1. Input Course Information\n");
+        printf("2. Save to Transcript\n");
+        printf("3. View Transcript\n");
+        printf("4. Calculate CGPA\n");
+        printf("5. Calculate SGPA\n");
+        printf("0. Exit\n");
+        printf("Choose an option: ");
+        scanf("%d", &option);
+
+        int semester;
+        switch (option) {
+            case 1:
+                if (count < MAX_COURSES) {
+                    inputCourse(&courses[count]);
+                    count++;
+                } else {
+                    printf("Maximum number of courses reached.\n");
+                }
+                break;
+            case 2:
+                saveToFile(courses, count);
+                printf("Data saved to transcript.txt\n");
+                break;
+            case 3:
+                viewTranscript();
+                break;
+            case 4:
+                printf("CGPA: %.2f\n", calculateCGPA(courses, count));
+                break;
+            case 5:
+                printf("Enter Semester to Calculate SGPA: ");
+                scanf("%d", &semester);
+                printf("SGPA for Semester %d: %.2f\n", semester, calculateSGPA(courses, count, semester));
+                break;
+            case 0:
+                printf("Exiting the program.\n");
+                break;
+            default:
+                printf("Invalid option. Please try again.\n");
+        }
+
+    } while (option != 0);
+
+    return 0;
 }
