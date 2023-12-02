@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *rev_str(char *str, int size) {
+char *reverse(char *str, int size) {
 	char *new_str = (char *)malloc(size+2);
 	*new_str = '\0', strncat(new_str, str, size);
 	for (int i = 0; i < size/2; i++) {
@@ -20,7 +20,7 @@ char *rev_str(char *str, int size) {
 }
 
 
-char *spin_str(char *str) {
+char *spin(char *str) {
 	char *new_str = (char *)malloc(strlen(str)+1), *front = str, *back = str;
 	memset(new_str, '\0', strlen(str)+1);
 	while (*front) {
