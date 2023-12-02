@@ -141,12 +141,12 @@ int main() {
             l++;
         }
         case 6:
-        char title[102];
+        char title2[102];
         int num2;
         printf("Enter book title and accession number in the format 'name-accessionnumber': ");
-        scanf("%s-%d",title,&num2);
-        if (findbook(title,num2)) {
-            book[findbook(title,num2)].flag = 0;
+        scanf("%s-%d",title2,&num2);
+        if (findbook(title2,num2)) {
+            book[findbook(title2,num2)].flag = 0;
         }
         else {
             printf("Book does not exist");
@@ -158,4 +158,5 @@ int main() {
         return 0;
     }
     }
-        
+    return 0;
+}
