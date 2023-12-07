@@ -10,14 +10,6 @@
 #include <time.h>
 #include <stdbool.h>
 
-struct Employee {
-	char name[100];
-	char role[100];
-	int communication;
-	int teamwork;
-	int creativity;
-};
-
 void identity() {
 	printf("Code by Muhammad Abser Mansoor 23K-0030\n\n\n");
 }
